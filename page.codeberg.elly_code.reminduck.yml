@@ -29,12 +29,15 @@ modules:
   - name: reminduck
     buildsystem: meson
     config-opts:
-      - --buildtype=release
+      # Flathub strips debug symbols into a separate extension
+      - --buildtype=debugoptimized
     sources:
       - type: git
         url: https://codeberg.org/elly-code/reminduck.git
         tag: 2.5.0-1
         commit: 5e04bc28c1bb091fb8b9edae4b5b878a3e2e14bd
+        # Flathub's auto update bot
         x-checker-data:
           type: git
-          tag-pattern: '^\d+.\d+.\d+($|-\d+$)'
+          tag-pattern: '^\d+.\d+.\d+$'
+          sort-tags: false

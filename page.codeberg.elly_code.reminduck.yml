@@ -35,6 +35,8 @@ modules:
         url: https://codeberg.org/elly-code/reminduck.git
         tag: 2.5.0-1
         commit: 5e04bc28c1bb091fb8b9edae4b5b878a3e2e14bd
+        # Flathub's auto update bot
         x-checker-data:
           type: git
-          tag-pattern: '^\d+.\d+.\d+($|-\d+$)'
+          tag-pattern: '^\d+.\d+.\d+$'
+          sort-tags: false

@@ -29,7 +29,8 @@ modules:
   - name: reminduck
     buildsystem: meson
     config-opts:
-      - --buildtype=release
+      # Flathub strips debug symbols into a separate extension
+      - --buildtype=debugoptimized
     sources:
       - type: git
         url: https://codeberg.org/elly-code/reminduck.git

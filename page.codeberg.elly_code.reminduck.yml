@@ -39,5 +39,5 @@ modules:
         # Flathub's auto update bot
         x-checker-data:
           type: git
-          tag-pattern: '^\d+.\d+.\d+$'
+          tag-pattern: '^([0-9]+\.[0-9]+\.[0-9]+)$'
           sort-tags: false
